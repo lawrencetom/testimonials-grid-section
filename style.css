@@ -6,6 +6,7 @@ h1 {
     margin-top: 1em;
     font-size: 20px;
     font-weight: 600;
+    z-index: 20;
 }
 
 h2 {
@@ -51,9 +52,11 @@ p {
 }
 
 .container {
+    position: relative;
     border-radius: 12px;
     box-shadow: 2em 2em 4.5em -1.5em hsla(217, 19%, 35%, 0.45);
     font-family: 'Barlow Semi Condensed', sans-serif;
+    z-index: 0;
 }
 
 .dark {
@@ -76,6 +79,7 @@ p {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    z-index: 10;
 }
 
 .profile-img {
@@ -126,6 +130,12 @@ p {
 #c5 {
     grid-area: c5;
     background-color: hsl(0, 0%, 100%);
+}
+
+#quotes {
+    position: absolute;
+    right: 15%;
+    z-index: 1;
 }
 
 
