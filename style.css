@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 /*global*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     margin: 0;
     margin-top: 1em;
@@ -32,14 +37,30 @@ p {
 
 
 /*structure*/
+body {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.box {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
     min-width: 57em;
     max-width: 69.5em;
     min-height: 35.875em;
-    margin: auto;
-    padding-top: clamp(1em, 5%, 7.5em);
-    padding-left: clamp(1em, 1%, 5em);
-    padding-right: clamp(1em, 1%, 5em);
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: max(1em, 1%);
+    padding-right: max(1em, 1%);
     
     display: grid;
     justify-content: center;
@@ -97,9 +118,8 @@ p {
 }
 
 .attribution {
-    padding-top: 2em;
-    padding-bottom: 2em;
-
+    flex: 0 1 20px;
+    position: relative;
     font-family: "Barlow Semi Condensed";
     font-size: 13px;
     color: hsl(217, 19%, 35%, 0.7);
